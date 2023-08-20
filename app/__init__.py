@@ -19,7 +19,8 @@ login_manager.login_view = 'auth.sign_in'
 login_manager.login_message= 'Please log in to view this page'
 login_manager.login_message_category = 'warning'
 
-
+from app.blueprints.api import bp as api
+app.register_blueprint(api)
 
 # #############
 from app import models
